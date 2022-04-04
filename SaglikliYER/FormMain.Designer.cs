@@ -259,7 +259,7 @@ namespace SaglikliYER
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(167, 85);
+            this.label3.Location = new System.Drawing.Point(167, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(191, 26);
             this.label3.TabIndex = 29;
