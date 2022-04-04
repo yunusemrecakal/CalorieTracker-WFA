@@ -263,6 +263,7 @@ namespace SaglikliYER
             this.KeyPreview = true;
             this.Name = "FormFeedMonster";
             this.Text = "FormFeedMonster";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormFeedMonster_FormClosing);
             this.Load += new System.EventHandler(this.FormFeedMonster_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormFeedMonster_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pbHav)).EndInit();

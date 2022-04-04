@@ -196,5 +196,10 @@ namespace SaglikliYER
                 button2.PerformClick();
             }
         }
+
+        private void FormFeedMonster_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            timer1.Stop();
+        }
     }
 }
