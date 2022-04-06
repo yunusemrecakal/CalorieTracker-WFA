@@ -61,5 +61,12 @@ namespace YerNTier.DAL.Repositories
         {
             return dbContext.DUsers.Select(a=>a.Email).ToList();
         }
+
+        public void userUpdateForLevel(int userID , DUser dUser)
+        {
+            DUser oldUser = GetUserByUserID(userID);
+            oldUser.Level = dUser.Level;
+            dbContext.SaveChanges();
+        }
     }
 }

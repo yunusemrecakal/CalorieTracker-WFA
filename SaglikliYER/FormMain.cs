@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YerNTier.BLL.Services;
+using YerNTier.Model.Entities;
 
 namespace SaglikliYER
 {
@@ -17,10 +19,12 @@ namespace SaglikliYER
             InitializeComponent();
         }
         int userID;
+        UserService userService;
         public FormMain(int _userID)
         {
             InitializeComponent();
             userID = _userID;
+            userService = new UserService();
         }
 
         private void btnDrinkWater_Click(object sender, EventArgs e)
@@ -33,10 +37,17 @@ namespace SaglikliYER
 
         private void btnAddFood_Click(object sender, EventArgs e)
         {
-            FormUrunEkleme urunEkleme = new FormUrunEkleme();
-            urunEkleme.Owner = this;
-            this.Hide();
-            urunEkleme.Show();
+            DUser dUser = userService.GetUserByUserID(userID);
+
+            if (dUser.Level >= 5)
+            {
+                FormUrunEkleme urunEkleme = new FormUrunEkleme();
+                urunEkleme.Owner = this;
+                this.Hide();
+                urunEkleme.Show();
+            }
+            else MessageBox.Show("Your level is not enough for adding food. " +
+                "You need to spend more time in the program to level up.");
         }
 
         private void btnCalculator_Click(object sender, EventArgs e)
@@ -84,6 +95,8 @@ namespace SaglikliYER
             button13.Enabled = false;
             button14.Enabled = false;
             button15.Enabled = false;
+            timer1.Interval = 1000;
+            timer1.Start();
         }
 
         private void btnNotif_Click(object sender, EventArgs e)
@@ -121,6 +134,21 @@ namespace SaglikliYER
         private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Owner.Show();
+            timer1.Stop();
+        }
+        int sayac = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DUser dUser = userService.GetUserByUserID(userID);
+
+            sayac++;
+
+            if (sayac!= 0 && sayac%300==0)
+            {
+                dUser.Level += 1;
+                userService.userUpdateForLevel(userID, dUser);
+                MessageBox.Show("Level Up !! Your level = " + dUser.Level);
+            }
         }
     }
 }

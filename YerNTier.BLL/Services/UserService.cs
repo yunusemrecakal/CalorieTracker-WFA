@@ -81,5 +81,10 @@ namespace YerNTier.BLL.Services
                 return sonuc;
             }
         }
+
+        public void userUpdateForLevel(int userID, DUser dUser)
+        {
+            userRepository.userUpdateForLevel(userID,dUser);
+        }
     }
 }
