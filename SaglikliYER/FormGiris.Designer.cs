@@ -41,12 +41,12 @@ namespace SaglikliYER
             this.msIletisim = new System.Windows.Forms.ToolStripMenuItem();
             this.msKonum = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSignUp = new System.Windows.Forms.Button();
             this.btnKacKalori = new System.Windows.Forms.Button();
             this.btnSesAc = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -73,14 +73,14 @@ namespace SaglikliYER
             // smSaglikliYer
             // 
             this.smSaglikliYer.Name = "smSaglikliYer";
-            this.smSaglikliYer.Size = new System.Drawing.Size(178, 22);
-            this.smSaglikliYer.Text = "What is SağlıklıYER?";
+            this.smSaglikliYer.Size = new System.Drawing.Size(180, 22);
+            this.smSaglikliYer.Text = "What is SocialFit?";
             this.smSaglikliYer.Click += new System.EventHandler(this.smSaglikliYer_Click);
             // 
             // smEkibimiz
             // 
             this.smEkibimiz.Name = "smEkibimiz";
-            this.smEkibimiz.Size = new System.Drawing.Size(178, 22);
+            this.smEkibimiz.Size = new System.Drawing.Size(180, 22);
             this.smEkibimiz.Text = "Our Team";
             this.smEkibimiz.Click += new System.EventHandler(this.smEkibimiz_Click);
             // 
@@ -144,17 +144,6 @@ namespace SaglikliYER
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 30);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(321, 228);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            // 
             // btnSignUp
             // 
             this.btnSignUp.BackColor = System.Drawing.Color.Silver;
@@ -196,16 +185,27 @@ namespace SaglikliYER
             this.btnSesAc.UseVisualStyleBackColor = true;
             this.btnSesAc.Click += new System.EventHandler(this.btnSesAc_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(11, 76);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(322, 144);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(346, 528);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSesAc);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnKacKalori);
             this.Name = "FormGiris";
@@ -213,7 +213,7 @@ namespace SaglikliYER
             this.Load += new System.EventHandler(this.FormGiris_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,10 +232,10 @@ namespace SaglikliYER
         private System.Windows.Forms.ToolStripMenuItem msIletisim;
         private System.Windows.Forms.ToolStripMenuItem msKonum;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.Button btnKacKalori;
         private System.Windows.Forms.Button btnSesAc;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

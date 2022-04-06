@@ -33,16 +33,15 @@ namespace SaglikliYER
             pictureBox1.Visible = false;
             switch (type)
             {
-                case 0: lblBilgilendirme.Text = "SağlıklıYER ? SağlıklıYER is a free diet application that helps you to " +
-                        "reach your ideal weight and healthy life The 'YER' letters represents initials of " +
-                        "the the founders names of this program Can I really lose weight with SağlıklıYER? ?Of course " +
+                case 0: lblBilgilendirme.Text = "SocialFit ? SocialFit is a free diet application that helps you to " +
+                        "reach your ideal weight and healthy life .Can I really lose weight with SocialFit? Of course " +
                         "you can! By looking at the Challange page you can see the user success stories who " +
-                        "are using SağlıklıYER and get inspiration from their experiences How can I sign up to " +
-                        "SağlıklıYER? You can sign up through the application. You will get services " +
+                        "are using SocialFit and get inspiration from their experiences How can I sign up to " +
+                        "SocialFit? You can sign up through the application. You will get services " +
                         "after downloading the application as: From “How much calorie” section finding foods " +
                         "neutrient values , Adding foods you eat to “Follow-up calorie” seeing the calorie you " +
                         "have been taken, following contents containing diets, following the amount of water";break; 
-                case 1: lblBilgilendirme.Text = "SağlıklıYER team is composed of three people." +
+                case 1: lblBilgilendirme.Text = "SocialFit team is composed of three people." +
                         "Talented software developers who come together to create this project are; \nRezan Söylemez, " +
                         "\nYunus Emre Çakal (Esra's love <3), \nEmre Özpınar";break; 
                 case 2: lblBilgilendirme.Text = "The Karatay diet, which can also be defined as the 'Canan Karatay' " +
