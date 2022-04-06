@@ -78,7 +78,7 @@ namespace SaglikliYER
             this.Controls.Add(this.lblBilgilendirme);
             this.Name = "FormBilgilendirme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormBilgilendirme";
+            this.Text = "Information";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormBilgilendirme_FormClosed);
             this.Load += new System.EventHandler(this.FormBilgilendirme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

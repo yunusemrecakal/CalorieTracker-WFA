@@ -112,7 +112,7 @@ namespace SaglikliYER
             this.Controls.Add(this.groupBox1);
             this.Name = "FormNotification";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormNotification";
+            this.Text = "Notification";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormNotification_FormClosed);
             this.Load += new System.EventHandler(this.FormNotification_Load);
             this.groupBox1.ResumeLayout(false);
