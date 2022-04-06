@@ -44,6 +44,7 @@ namespace SaglikliYER
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtSearcUser = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox6.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -116,12 +117,13 @@ namespace SaglikliYER
             // columnHeader6
             // 
             this.columnHeader6.Text = "E-mail";
-            this.columnHeader6.Width = 83;
+            this.columnHeader6.Width = 143;
             // 
             // listView2
             // 
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader6});
+            this.columnHeader6,
+            this.columnHeader1});
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(6, 21);
             this.listView2.Name = "listView2";
@@ -210,6 +212,10 @@ namespace SaglikliYER
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search User";
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Level";
+            // 
             // FormChallange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,5 +258,6 @@ namespace SaglikliYER
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtSearcUser;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }

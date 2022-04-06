@@ -122,6 +122,7 @@ namespace SaglikliYER
                 listVItem = new ListViewItem();
                 listVItem.Tag = item.DUserID;
                 listVItem.Text = item.Email;
+                listVItem.SubItems.Add(item.Level.ToString());
                 listView2.Items.Add(listVItem);
             }
         }
