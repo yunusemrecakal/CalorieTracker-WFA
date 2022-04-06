@@ -403,6 +403,12 @@ namespace SaglikliYER
             GetTurn(); 
 
         }
+
+        private void FormTicTacToe_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Show();
+        }
+
         void GetTurn()
         {
             TicTac ticTac = userInfoService.GetTicTac(1);

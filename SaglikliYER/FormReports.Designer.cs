@@ -285,7 +285,9 @@ namespace SaglikliYER
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnBack);
             this.Name = "FormReports";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormReports";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormReports_FormClosed);
             this.Load += new System.EventHandler(this.FormReports_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

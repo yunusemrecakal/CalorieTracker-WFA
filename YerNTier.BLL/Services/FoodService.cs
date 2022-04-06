@@ -23,7 +23,7 @@ namespace YerNTier.BLL.Services
             {
                 return foods;
             }
-            else throw new Exception("Hatalı");
+            else throw new Exception("Please check your UserID.");
         }
 
         public List<Food> GetFoodsByTextCheck(string text)
@@ -33,7 +33,7 @@ namespace YerNTier.BLL.Services
             {
                 return foods;
             }
-            else throw new Exception("Hatalı");
+            else throw new Exception("Please check your text.");
         }
 
         public Food GetByFoodIdCheck(int foodID)
@@ -43,7 +43,7 @@ namespace YerNTier.BLL.Services
             {
                 return food;
             }
-            else throw new Exception("Hatalı");
+            else throw new Exception("Please check your FoodID.");
         }
 
         bool CheckFood(Food _food)
@@ -58,20 +58,19 @@ namespace YerNTier.BLL.Services
         public void Insert(Food food)
         {
             if (CheckFood(food) == false)
-                throw new Exception("Ürün kaydedilemedi");
+                throw new Exception("Inserting food failed.");
             else if (CheckFood(food) == true)
                   foodRepository.Insert(food); 
         }
 
         public bool Update(Food _food)
         {
-            
             if (_food != null && CheckFood(_food)!=false)
             {
                 return foodRepository.Update(_food);
             }
             else
-                throw new Exception("Meal bilgilerini kontrol edin");
+                throw new Exception("Please choose a food in food list.");
         }
 
         public bool Delete(Food _food)
@@ -82,14 +81,14 @@ namespace YerNTier.BLL.Services
                 return foodRepository.Delete(_food);
             }
             else
-                throw new Exception("UserId kontrol ediniz");
+                throw new Exception("Please choose a food in food list.");
         }
 
         public bool InsertFoodCategory(FoodCategory _foodCategory)
         {
             if (_foodCategory.Description == null || _foodCategory.CategoryName == null)
             {
-                throw new Exception("hata insert food category");
+                throw new Exception("Inserting food category failed.");
             }
             else return foodRepository.InsertFoodCategory(_foodCategory);
         }

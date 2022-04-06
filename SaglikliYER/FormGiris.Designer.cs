@@ -67,21 +67,21 @@ namespace SaglikliYER
             this.smSaglikliYer,
             this.smEkibimiz});
             this.lllllllToolStripMenuItem.Name = "lllllllToolStripMenuItem";
-            this.lllllllToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
-            this.lllllllToolStripMenuItem.Text = "Hakkımızda";
+            this.lllllllToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.lllllllToolStripMenuItem.Text = "About Us";
             // 
             // smSaglikliYer
             // 
             this.smSaglikliYer.Name = "smSaglikliYer";
-            this.smSaglikliYer.Size = new System.Drawing.Size(168, 22);
-            this.smSaglikliYer.Text = "SağlıklıYER Nedir?";
+            this.smSaglikliYer.Size = new System.Drawing.Size(180, 22);
+            this.smSaglikliYer.Text = "What is SağlıklıYER?";
             this.smSaglikliYer.Click += new System.EventHandler(this.smSaglikliYer_Click);
             // 
             // smEkibimiz
             // 
             this.smEkibimiz.Name = "smEkibimiz";
             this.smEkibimiz.Size = new System.Drawing.Size(180, 22);
-            this.smEkibimiz.Text = "Ekibimiz";
+            this.smEkibimiz.Text = "Our Team";
             this.smEkibimiz.Click += new System.EventHandler(this.smEkibimiz_Click);
             // 
             // diyetlerimizToolStripMenuItem
@@ -90,21 +90,21 @@ namespace SaglikliYER
             this.msKaratay,
             this.msKetojenik});
             this.diyetlerimizToolStripMenuItem.Name = "diyetlerimizToolStripMenuItem";
-            this.diyetlerimizToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
-            this.diyetlerimizToolStripMenuItem.Text = "Diyetlerimiz";
+            this.diyetlerimizToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.diyetlerimizToolStripMenuItem.Text = "Diets";
             // 
             // msKaratay
             // 
             this.msKaratay.Name = "msKaratay";
-            this.msKaratay.Size = new System.Drawing.Size(195, 22);
-            this.msKaratay.Text = "Karatay Diyeti Nedir?";
+            this.msKaratay.Size = new System.Drawing.Size(180, 22);
+            this.msKaratay.Text = "Karatay Diet";
             this.msKaratay.Click += new System.EventHandler(this.msKaratay_Click);
             // 
             // msKetojenik
             // 
             this.msKetojenik.Name = "msKetojenik";
-            this.msKetojenik.Size = new System.Drawing.Size(195, 22);
-            this.msKetojenik.Text = "Ketojenik Diyet Nedir?";
+            this.msKetojenik.Size = new System.Drawing.Size(180, 22);
+            this.msKetojenik.Text = "Ketojenik Diet";
             this.msKetojenik.Click += new System.EventHandler(this.msKetojenik_Click);
             // 
             // iletişimToolStripMenuItem1
@@ -113,21 +113,21 @@ namespace SaglikliYER
             this.msIletisim,
             this.msKonum});
             this.iletişimToolStripMenuItem1.Name = "iletişimToolStripMenuItem1";
-            this.iletişimToolStripMenuItem1.Size = new System.Drawing.Size(57, 20);
-            this.iletişimToolStripMenuItem1.Text = "İletişim";
+            this.iletişimToolStripMenuItem1.Size = new System.Drawing.Size(61, 20);
+            this.iletişimToolStripMenuItem1.Text = "Contact";
             // 
             // msIletisim
             // 
             this.msIletisim.Name = "msIletisim";
-            this.msIletisim.Size = new System.Drawing.Size(180, 22);
-            this.msIletisim.Text = "İletişim Bilgileri";
+            this.msIletisim.Size = new System.Drawing.Size(187, 22);
+            this.msIletisim.Text = "Contact Informations";
             this.msIletisim.Click += new System.EventHandler(this.msIletisim_Click);
             // 
             // msKonum
             // 
             this.msKonum.Name = "msKonum";
-            this.msKonum.Size = new System.Drawing.Size(180, 22);
-            this.msKonum.Text = "Konum";
+            this.msKonum.Size = new System.Drawing.Size(187, 22);
+            this.msKonum.Text = "Location";
             this.msKonum.Click += new System.EventHandler(this.msKonum_Click);
             // 
             // btnLogin
@@ -209,6 +209,7 @@ namespace SaglikliYER
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnKacKalori);
             this.Name = "FormGiris";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormGiris";
             this.Load += new System.EventHandler(this.FormGiris_Load);
             this.menuStrip1.ResumeLayout(false);

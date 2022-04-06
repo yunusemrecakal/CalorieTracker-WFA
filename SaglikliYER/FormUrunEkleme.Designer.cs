@@ -192,7 +192,7 @@ namespace SaglikliYER
             this.groupBox1.Size = new System.Drawing.Size(301, 202);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Food/per100gr";
+            this.groupBox1.Text = "Food/per100g";
             // 
             // cmbCategoryName
             // 
@@ -374,7 +374,7 @@ namespace SaglikliYER
             this.groupBox2.Size = new System.Drawing.Size(616, 482);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Adding Group";
+            this.groupBox2.Text = "Add Food";
             // 
             // openFileDialog1
             // 
@@ -388,7 +388,9 @@ namespace SaglikliYER
             this.ClientSize = new System.Drawing.Size(639, 502);
             this.Controls.Add(this.groupBox2);
             this.Name = "FormUrunEkleme";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormUrunEkleme";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormUrunEkleme_FormClosed);
             this.Load += new System.EventHandler(this.FormUrunEkleme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudProtein)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCalorie)).EndInit();

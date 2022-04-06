@@ -257,9 +257,9 @@ namespace SaglikliYER
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.Location = new System.Drawing.Point(54, 128);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(135, 13);
+            this.label9.Size = new System.Drawing.Size(121, 13);
             this.label9.TabIndex = 3;
-            this.label9.Text = "Şifre Zorluk Derecesi :";
+            this.label9.Text = "Password Strength :";
             // 
             // lblDerece
             // 
@@ -473,7 +473,9 @@ namespace SaglikliYER
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormSignUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSignUp";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormSignUp_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.numKilo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBoy)).EndInit();
             this.groupBox3.ResumeLayout(false);

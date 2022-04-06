@@ -41,7 +41,7 @@ namespace SaglikliYER
                 food.Protein = nudProtein.Value;
                 foodService.Update(food);
                 listviewDoldur();
-                MessageBox.Show("Ürün değiştirme başarılı!");
+                MessageBox.Show("Complete Successfully!");
                 ClearItems();
             }
             catch (Exception ex)
@@ -64,7 +64,7 @@ namespace SaglikliYER
                 food.CategoryID = Convert.ToInt32(cmbCategoryName.SelectedValue); //seçilen kategorinin indexi tag de taşınır
                 foodService.Insert(food);
                 listviewDoldur();
-                MessageBox.Show("Ürün kaydetme başarılı!");
+                MessageBox.Show("Complete Successfully!");
                 ClearItems();
             }
             catch (Exception ex)
@@ -126,7 +126,7 @@ namespace SaglikliYER
                 foodCategory.Description = txtDescription.Text;
                 foodService.InsertFoodCategory(foodCategory);
 
-                MessageBox.Show("Ürün kategori kaydetme başarılı!");
+                MessageBox.Show("Complete Successfully!");
                 CmbCategoryDoldur();
                 ClearItems();
             }
@@ -172,7 +172,7 @@ namespace SaglikliYER
                 Food food = new Food();
                 food.FoodID = (int)listView1.SelectedItems[0].Tag;
                 foodService.Delete(food);
-                MessageBox.Show("Silme işlemi başarılı");
+                MessageBox.Show("Complete Successfully!");
                 listviewDoldur();
             }
             catch (Exception ex)
@@ -201,5 +201,9 @@ namespace SaglikliYER
 
         }
 
+        private void FormUrunEkleme_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Show();
+        }
     }
 }

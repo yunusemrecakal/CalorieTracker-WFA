@@ -55,20 +55,20 @@ namespace SaglikliYER
                 foreach (UserInfo item in infoList)
                 {
                     ListViewItem listView = new ListViewItem();
-                    //listView.Tag = item.DUserID;
-                    //listView.Text = item.DUsers.UserDetail.UserName;
-                    //listView.SubItems.Add(item.DUsers.UserDetail.SurName);
-                    //listView.SubItems.Add(item.MessageComment);
                     listView.Text = item.MessageComment;
                     listView.SubItems.Add(item.SenderName);
                     listView1.Items.Add(listView);
-
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void FormNotification_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Show();
         }
     }
 }

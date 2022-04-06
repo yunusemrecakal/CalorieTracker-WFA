@@ -78,7 +78,7 @@ namespace SaglikliYER
                         else if (radioWoman.Checked) userDetail.Gender = true;
                         userDetail.UserDetailID = dUser.DUserID;
                         userDatailsServece.CAddUserDetail(userDetail);
-                        MessageBox.Show("Kayıt Başarılı");
+                        MessageBox.Show("Registiration is succesfull.");
                     }
                     
                     txtEmail.Text = "";
@@ -89,7 +89,7 @@ namespace SaglikliYER
                     numBoy.Value = 0;
                     numKilo.Value = 0;
                 }
-                else MessageBox.Show("Şifreler uyuşmuyor.");             
+                else MessageBox.Show("Passwords do not match.");             
             }
             catch (Exception ex)
             {
@@ -104,7 +104,7 @@ namespace SaglikliYER
             int UzunlukAl = _pass.Length;
             if (UzunlukAl < 6)
             {
-                return "Zayıf Şifre..";
+                return "Weak Password..";
             }
             else
             {
@@ -123,38 +123,38 @@ namespace SaglikliYER
 
                 if (rakamMi == true && buyukMu == true && kucukMu == true)
                 {
-                    return "Güçlü Şifre..";
+                    return "Strong Password..";
                 }
                 else if (rakamMi == true && buyukMu == true && kucukMu == false)
                 {
-                    return "Orta Şifre..";
+                    return "Normal Password..";
                 }
                 else if (rakamMi == false && buyukMu == false && kucukMu == false)
                 {
-                    return "Zayıf Şifre..";
+                    return "Weak Password..";
                 }
                 else
                 {
-                    return "Orta Şifre..";
+                    return "Normal Password..";
                 }
             }
         }
 
         private void btnQuestions_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("En az 6 karakter." +
-                    "En az bir Rakam, bir Büyük Harf ve Küçük Harf Kullanın !");
+            MessageBox.Show("Password should have minimum six characters, at least one uppercase, one lowercase " +
+                "characters and one number.!");
         }
 
         private void txtPassword1_TextChanged(object sender, EventArgs e)
         {
             lblDerece.Text = PassLevel(txtPassword1.Text);
 
-            if (PassLevel(txtPassword1.Text) == "Zayıf Şifre..")
+            if (PassLevel(txtPassword1.Text) == "Weak Password..")
                 lblDerece.ForeColor = Color.Red;
-            else if (PassLevel(txtPassword1.Text) == "Orta Şifre..")
+            else if (PassLevel(txtPassword1.Text) == "Normal Password..")
                 lblDerece.ForeColor = Color.Orange;
-            else if (PassLevel(txtPassword1.Text) == "Güçlü Şifre..")
+            else if (PassLevel(txtPassword1.Text) == "Strong Password..")
                 lblDerece.ForeColor = Color.Green;
         }
         
@@ -172,6 +172,11 @@ namespace SaglikliYER
                 txtPassword2.PasswordChar = '*';
                 count = true;
             }
+        }
+
+        private void FormSignUp_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Show();
         }
     }
 }

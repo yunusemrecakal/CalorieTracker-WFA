@@ -31,7 +31,6 @@ namespace SaglikliYER
         int userID ;
         private void btnBack_Click(object sender, EventArgs e)
         {
-            //içilen suyu database gönderir
             try
             {
                 int _quantity = Convert.ToInt32(txtDrunkWater.Text);
@@ -49,7 +48,6 @@ namespace SaglikliYER
         {
             UserDetail userDetail = UserDatailsServece.GetUserDetailByID(userID);
             
-            //database deki daha önce içtiği suyu getirir
             try
             {
                 txtDrunkWater.Text= waterService.WaterQuantity(userID).ToString();
@@ -60,7 +58,6 @@ namespace SaglikliYER
                 MessageBox.Show(ex.Message);
             }
 
-            //girilen kg ye göre içmesi gereken suyu yazdırır
             if (userDetail.Weight<50)
             {
                 txtWater.Text = "1800";
@@ -94,7 +91,6 @@ namespace SaglikliYER
                 txtWater.Text = "3900";
             }
 
-            //daha önce içilmiş sua göre butonu görünmez yapma
             if (Convert.ToInt32(txtDrunkWater.Text) - 300 >= 0) button1.Visible = false;
             if (Convert.ToInt32(txtDrunkWater.Text) - 600 >= 0) button2.Visible = false;
             if (Convert.ToInt32(txtDrunkWater.Text) - 900 >= 0) button3.Visible = false;
@@ -112,7 +108,7 @@ namespace SaglikliYER
             if (Convert.ToInt32(txtDrunkWater.Text) - 4500 >= 0)
             {
                 button15.Visible = false;
-                MessageBox.Show("Bugün yeterince su içtin !! Yoksa su zehirlenmesi olabilirsin Allah Muhafaza !! ");
+                MessageBox.Show("You drank enough water. Take care of yourself !!");
             }
 
 
@@ -206,6 +202,11 @@ namespace SaglikliYER
         {
             txtDrunkWater.Text = (Convert.ToInt32(txtDrunkWater.Text) + 300).ToString();
             button15.Visible = false;           
+        }
+
+        private void FormSuEkleme_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Show();
         }
     }
 }

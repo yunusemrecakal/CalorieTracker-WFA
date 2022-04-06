@@ -38,7 +38,6 @@ namespace SaglikliYER
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,7 +112,7 @@ namespace SaglikliYER
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Location = new System.Drawing.Point(218, 137);
+            this.btnLogin.Location = new System.Drawing.Point(218, 120);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(119, 64);
             this.btnLogin.TabIndex = 14;
@@ -126,40 +125,29 @@ namespace SaglikliYER
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(21, 150);
+            this.btnBack.Location = new System.Drawing.Point(21, 133);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(118, 30);
             this.btnBack.TabIndex = 13;
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.linkLabel1.Location = new System.Drawing.Point(18, 117);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(127, 16);
-            this.linkLabel1.TabIndex = 15;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Şifremi Unuttum !!";
-            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(355, 194);
-            this.Controls.Add(this.linkLabel1);
+            this.ClientSize = new System.Drawing.Size(355, 178);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnBack);
             this.Name = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormLogin_FormClosed);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -173,6 +161,5 @@ namespace SaglikliYER
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnShowPass;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

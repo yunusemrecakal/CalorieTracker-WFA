@@ -26,37 +26,49 @@ namespace SaglikliYER
         private void btnDrinkWater_Click(object sender, EventArgs e)
         {
             FormSuEkleme suEkleme = new FormSuEkleme(userID);
-            suEkleme.ShowDialog();
+            suEkleme.Owner = this;
+            this.Hide();
+            suEkleme.Show();
         }
 
         private void btnAddFood_Click(object sender, EventArgs e)
         {
             FormUrunEkleme urunEkleme = new FormUrunEkleme();
-            urunEkleme.ShowDialog();
+            urunEkleme.Owner = this;
+            this.Hide();
+            urunEkleme.Show();
         }
 
         private void btnCalculator_Click(object sender, EventArgs e)
         {
             FormKalHesaplama kalHesaplama = new FormKalHesaplama();
-            kalHesaplama.ShowDialog();
+            kalHesaplama.Owner = this;
+            this.Hide();
+            kalHesaplama.Show();
         }
 
         private void btnReports_Click(object sender, EventArgs e)
         {
             FormReports reports = new FormReports(userID);
-            reports.ShowDialog();
+            reports.Owner = this;
+            this.Hide();
+            reports.Show();
         }
 
         private void btnMeal_Click(object sender, EventArgs e)
         {
             FormMeal meal = new FormMeal(userID);
-            meal.ShowDialog();
+            meal.Owner = this;
+            this.Hide();
+            meal.Show();
         }
 
         private void btnChallange_Click(object sender, EventArgs e)
         {
             FormChallange challange = new FormChallange(userID);
-            challange.ShowDialog();
+            challange.Owner = this;
+            this.Hide();
+            challange.Show();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -77,25 +89,38 @@ namespace SaglikliYER
         private void btnNotif_Click(object sender, EventArgs e)
         {
             FormNotification notification = new FormNotification(userID);
-            notification.ShowDialog();
+            notification.Owner = this;
+            this.Hide();
+            notification.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             FormSettings formSettings = new FormSettings(userID);
-            formSettings.ShowDialog();
+            formSettings.Owner = this;
+            this.Hide();
+            formSettings.Show();
         }
 
         private void btnOyun_Click(object sender, EventArgs e)
         {
             FormTicTacToe formTicTacToe = new FormTicTacToe();
-            formTicTacToe.ShowDialog();
+            formTicTacToe.Owner = this;
+            this.Hide();
+            formTicTacToe.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             FormFeedMonster formFeedMonster = new FormFeedMonster();
-            formFeedMonster.ShowDialog();
+            formFeedMonster.Owner = this;
+            this.Hide();
+            formFeedMonster.Show();
+        }
+
+        private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Show();
         }
     }
 }

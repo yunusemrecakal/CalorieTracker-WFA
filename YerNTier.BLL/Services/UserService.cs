@@ -18,9 +18,15 @@ namespace YerNTier.BLL.Services
 
         public DUser CheckLogin(string _email,string _pass)
         {
-            if (_email=="" ||_pass=="" )
-                throw new Exception("Lütfen e-mail veya password giriniz.");
-            return userRepository.CheckByUserIdAndPassId(_email,_pass);
+            if (_email != "")
+            {
+                if (_pass != "")
+                {
+                    return userRepository.CheckByUserIdAndPassId(_email, _pass);
+                }
+                else throw new Exception("Please check your password.");
+            }
+            else throw new Exception("Please check your email.");
         }
 
         public int AddUser(DUser _user)
@@ -28,17 +34,29 @@ namespace YerNTier.BLL.Services
             if (_user != null)
                return userRepository.AddUser(_user);
             else
-                throw new Exception("Lütfen kontrol edin");
+                throw new Exception("Please check your User.");
         }
 
         public List<DUser> GetUserForChallenge(string _wish)
         {
-            return userRepository.GetUserForChallenge(_wish);
+            if (_wish != "")
+            {
+                return userRepository.GetUserForChallenge(_wish);
+            }
+            else throw new Exception("Please check your wish.");
         }
 
         public List<DUser> GetUserForChallengeAndKey(string _wish, string text)
         {
-            return userRepository.GetUserForChallengeAndKey(_wish,text);
+            if (_wish != "")
+            {
+                if (text != "")
+                {
+                    return userRepository.GetUserForChallengeAndKey(_wish, text);
+                }
+                else throw new Exception("Please check your text.");
+            }
+            else throw new Exception("Please check your wish.");
         }
 
         public DUser GetUserByUserID(int _userID)
@@ -46,7 +64,7 @@ namespace YerNTier.BLL.Services
             if (_userID > 0)
                 return userRepository.GetUserByUserID(_userID);
             else
-                throw new Exception("User Hatası");
+                throw new Exception("Please check your userID.");
         }
 
         public bool UserEmailIfExist(string _email)
@@ -55,7 +73,7 @@ namespace YerNTier.BLL.Services
             List<string> list = userRepository.GetUsersEmail();
             if (list.Contains(_email))
             {
-                throw new Exception("Böyle bir E-mail mevcut");
+                throw new Exception("This email already exist.");
             }
             else
             {

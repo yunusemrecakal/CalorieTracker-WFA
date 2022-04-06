@@ -128,11 +128,11 @@ namespace SaglikliYER
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(341, 351);
+            this.label2.Location = new System.Drawing.Point(390, 351);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(326, 13);
+            this.label2.Size = new System.Drawing.Size(277, 13);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Listelenen ürünlerin değerleri 100 gram üzerinden hesaplanmaktadır.";
+            this.label2.Text = "Calorie and protein values food are calculated over 100g.";
             // 
             // FormKalHesaplama
             // 
@@ -145,7 +145,9 @@ namespace SaglikliYER
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.listView1);
             this.Name = "FormKalHesaplama";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormKalHesaplama";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormKalHesaplama_FormClosing);
             this.Load += new System.EventHandler(this.FormKalHesaplama_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

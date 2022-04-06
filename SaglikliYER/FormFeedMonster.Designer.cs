@@ -48,6 +48,7 @@ namespace SaglikliYER
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbHav)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBro)).BeginInit();
@@ -240,12 +241,27 @@ namespace SaglikliYER
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Choose Level";
             // 
+            // btnBack
+            // 
+            this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBack.Location = new System.Drawing.Point(690, 457);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(119, 30);
+            this.btnBack.TabIndex = 22;
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // FormFeedMonster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(821, 510);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -262,8 +278,10 @@ namespace SaglikliYER
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.KeyPreview = true;
             this.Name = "FormFeedMonster";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormFeedMonster";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormFeedMonster_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormFeedMonster_FormClosed);
             this.Load += new System.EventHandler(this.FormFeedMonster_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormFeedMonster_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pbHav)).EndInit();
@@ -296,5 +314,6 @@ namespace SaglikliYER
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnBack;
     }
 }

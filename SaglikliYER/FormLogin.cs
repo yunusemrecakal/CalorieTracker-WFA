@@ -34,12 +34,13 @@ namespace SaglikliYER
                 if (dUser != null)
                 {
                     FormMain formMain = new FormMain(dUser.DUserID);
-                    formMain.ShowDialog();
+                    formMain.Owner = this;
+                    this.Hide();
+                    formMain.Show();
                     txtEmail.Text = "";
                     txtPassword1.Text = "";
-                    this.Close();
                 }
-                else MessageBox.Show("Kullanıcı hatalı veya şifre hatalı ");
+                else MessageBox.Show("Please check your user.");
             }
             catch (Exception ex2)
             {
@@ -64,6 +65,11 @@ namespace SaglikliYER
                 txtPassword1.PasswordChar = '*';
                 count = true;
             }
+        }
+
+        private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Show();
         }
     }
 }

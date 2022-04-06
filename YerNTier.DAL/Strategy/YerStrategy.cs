@@ -15,33 +15,33 @@ namespace YerNTier.DAL.Strategy
         {
             FoodCategory foodCategory = new FoodCategory
             {
-                CategoryName = "Sebzeler",
-                Description = "Sebzeleri içerir."
+                CategoryName = "Vegetables",
+                Description = "Vegetables are included."
             };
             yerDBcontext.FoodCategories.Add(foodCategory);
             FoodCategory foodCategory2 = new FoodCategory
             {
-                CategoryName = "Meyveler",
-                Description = "Meyveleri içerir."
+                CategoryName = "Fruits",
+                Description = "Fruits are included."
             };
             yerDBcontext.FoodCategories.Add(foodCategory2);
             FoodCategory foodCategory3 = new FoodCategory
             {
-                CategoryName = "Etler",
-                Description = "Etleri içerir."
+                CategoryName = "Meats",
+                Description = "Meats are included."
             };
             yerDBcontext.FoodCategories.Add(foodCategory3);
             FoodCategory foodCategory4 = new FoodCategory
             {
-                CategoryName = "Kuruyemişler",
-                Description = "Kuruyemişler içerir."
+                CategoryName = "Dried Fruits and Nuts",
+                Description = "Dried Fruits and Nuts are included."
             };
             yerDBcontext.FoodCategories.Add(foodCategory4);
             yerDBcontext.SaveChanges();
 
             Food food = new Food()
             {
-                FoodName = "Tavuk",
+                FoodName = "Chicken",
                 Calorie = 239,
                 Protein = 27,
                 CategoryID = 3,
@@ -53,7 +53,7 @@ namespace YerNTier.DAL.Strategy
 
             Food food1 = new Food()
             {
-                FoodName = "Havuç",
+                FoodName = "Carrot",
                 Calorie = 41,
                 Protein = 1,
                 CategoryID = 1,
@@ -66,7 +66,7 @@ namespace YerNTier.DAL.Strategy
 
             Food food2 = new Food()
             {
-                FoodName = "Elma",
+                FoodName = "Apple",
                 Calorie = 52,
                 Protein = 0,
                 CategoryID = 2,
@@ -79,7 +79,7 @@ namespace YerNTier.DAL.Strategy
 
             Food food3 = new Food()
             {
-                FoodName = "Fındık",
+                FoodName = "Hazelnut",
                 Calorie = 628,
                 Protein = 15,
                 CategoryID = 4,
@@ -91,7 +91,7 @@ namespace YerNTier.DAL.Strategy
 
             Food food4 = new Food()
             {
-                FoodName = "Badem",
+                FoodName = "Almond",
                 Calorie = 598,
                 Protein = 19,
                 CategoryID = 4,
@@ -115,7 +115,7 @@ namespace YerNTier.DAL.Strategy
 
             Food food6 = new Food()
             {
-                FoodName = "Tavuk Göğsü",
+                FoodName = "Chicken Breast",
                 Calorie = 110,
                 Protein = 25,
                 CategoryID = 3,
@@ -127,7 +127,7 @@ namespace YerNTier.DAL.Strategy
 
             Food food7 = new Food()
             {
-                FoodName = "Tavuk Pirzola",
+                FoodName = "Chicken Chop",
                 Calorie = 146,
                 Protein = 19,
                 CategoryID = 3,
@@ -139,7 +139,7 @@ namespace YerNTier.DAL.Strategy
 
             Food food8 = new Food()
             {
-                FoodName = "Fıstık",
+                FoodName = "Peanut",
                 Calorie = 567,
                 Protein = 26,
                 CategoryID = 4,
@@ -163,7 +163,7 @@ namespace YerNTier.DAL.Strategy
 
             Food food10 = new Food()
             {
-                FoodName = "Patlıcan",
+                FoodName = "Aubergine",
                 Calorie = 61,
                 Protein = 1,
                 CategoryID = 1,
@@ -175,7 +175,7 @@ namespace YerNTier.DAL.Strategy
 
             Food food11 = new Food()
             {
-                FoodName = "Portakal",
+                FoodName = "Orange",
                 Calorie = 101,
                 Protein = 1,
                 CategoryID = 2,
@@ -187,7 +187,7 @@ namespace YerNTier.DAL.Strategy
 
             Food food12 = new Food()
             {
-                FoodName = "Kiraz",
+                FoodName = "Cherry",
                 Calorie = 63,
                 Protein = 1,
                 CategoryID = 2,
@@ -199,7 +199,7 @@ namespace YerNTier.DAL.Strategy
 
             Food food13 = new Food()
             {
-                FoodName = "Muz",
+                FoodName = "Banana",
                 Calorie = 88,
                 Protein = 1,
                 CategoryID = 2,

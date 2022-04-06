@@ -41,7 +41,7 @@ namespace SaglikliYER
         {
             if (listView1.SelectedItems[0].Tag == null)
             {
-                MessageBox.Show("Lütfen Food seçiniz. ");
+                MessageBox.Show("Please choose a food.");
                 return;
             }
 
@@ -66,7 +66,7 @@ namespace SaglikliYER
 
             mealService.Update((int)listView1.SelectedItems[0].Tag,food);
 
-            MessageBox.Show("Eaten Food Yenilendi");
+            MessageBox.Show("Food is updated.");
 
             FillListview();
         }
@@ -79,14 +79,14 @@ namespace SaglikliYER
                 meal.DUserID = userID;
                 if (comboBox1.SelectedItem == null)
                 {
-                    MessageBox.Show("Lütfen bir meal seçiniz ");
+                    MessageBox.Show("Please choose a meal.");
                     return;
                 }
                 meal.MealName = comboBox1.SelectedItem.ToString();
                 meal.MealDate = dtpMealDate.Value;
                 mealService.Insert(meal);
 
-                MessageBox.Show("Meal eklendi");
+                MessageBox.Show("Meal is added.");
 
                 lbDoldur();
                 cmbDoldur();
@@ -161,7 +161,7 @@ namespace SaglikliYER
         {
             if (listBox1.SelectedValue == null) 
             {
-                MessageBox.Show("Lütfen Meal seçiniz");
+                MessageBox.Show("Please choose a meal from meal list.");
                 return;
             }
 
@@ -188,7 +188,7 @@ namespace SaglikliYER
             food.EatenColorie = (k * food.EatenQuantity * food2.Calorie) / 100;
 
             mealService.AddFoodsToMeals(meal, food);
-            MessageBox.Show("Food eklendi");
+            MessageBox.Show("Food is added.");
 
             lbDoldur();
             cmbDoldur();
@@ -227,7 +227,7 @@ namespace SaglikliYER
                 Meal meal = mealService.GetByMealId(Convert.ToInt32(listBox1.SelectedValue));
                 mealService.CDelete(meal);
 
-                MessageBox.Show("Meal silindi");
+                MessageBox.Show("Meal is deleted.");
 
                 lbDoldur();
                 listView1.Items.Clear();
@@ -238,9 +238,13 @@ namespace SaglikliYER
         {
             EatenFood eatenFood = mealService.GetByEatenFoodId((int)listView1.SelectedItems[0].Tag);
             mealService.Delete(eatenFood);
-            MessageBox.Show("Eaten Food silindi");
+            MessageBox.Show("Food is deleted.");
             FillListview();
         }
 
+        private void FormMeal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Show();
+        }
     }
 }

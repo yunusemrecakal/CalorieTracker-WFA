@@ -19,14 +19,20 @@ namespace YerNTier.BLL.Services
         {
             if (_userID > 0)
                 return waterRepository.GetWater(_userID);
-            else throw new Exception("UserId hatalı");
+            else throw new Exception("Please check your UserID.");
         }
 
         public bool UpdateQuantity(int _userID, int _quantity)
         {
-            if (_userID > 0 && _quantity >= 0)
-                return waterRepository.UpdateWater(_userID, _quantity);
-            else throw new Exception("UserID ve Quantity Hatası");
+            if (_userID > 0) 
+            {
+                if (_quantity >= 0)
+                {
+                    return waterRepository.UpdateWater(_userID, _quantity);
+                }
+                else throw new Exception("Please check your quantity.");
+            }
+            else throw new Exception("Please check your UserID.");
         }
     }
 }

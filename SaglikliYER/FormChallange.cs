@@ -53,12 +53,11 @@ namespace SaglikliYER
                 UserDetail userDetail = userDatailsServece.GetUserDetailByID(sUserID);
                 info.SenderName = userDetail.UserName;
                 userInfoService.AddMess(info);
-                MessageBox.Show("Tebrik ettiniz");
+                MessageBox.Show("Your message is sended.");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-             
             }
         }
         int userID;
@@ -73,7 +72,7 @@ namespace SaglikliYER
                 UserDetail userDetail = userDatailsServece.GetUserDetailByID(sUserID);
                 info.SenderName = userDetail.UserName;
                 userInfoService.AddMess(info);
-                MessageBox.Show("Challenge Davet ettiniz");
+                MessageBox.Show("Your message is sended.");
             }
             catch (Exception ex)
             {
@@ -125,6 +124,11 @@ namespace SaglikliYER
                 listVItem.Text = item.Email;
                 listView2.Items.Add(listVItem);
             }
+        }
+
+        private void FormChallange_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Show();
         }
     }
 }

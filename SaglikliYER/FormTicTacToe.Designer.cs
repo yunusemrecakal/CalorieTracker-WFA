@@ -225,6 +225,7 @@ namespace SaglikliYER
             this.Name = "FormTicTacToe";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormTicTacToe_FormClosed);
             this.Load += new System.EventHandler(this.FormTicTacToe_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

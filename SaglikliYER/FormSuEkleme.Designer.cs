@@ -31,6 +31,7 @@ namespace SaglikliYER
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSuEkleme));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
@@ -57,6 +58,7 @@ namespace SaglikliYER
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.button15);
             this.groupBox1.Controls.Add(this.button14);
             this.groupBox1.Controls.Add(this.button13);
@@ -84,6 +86,15 @@ namespace SaglikliYER
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Drink Water";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(293, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(24, 16);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "ml";
             // 
             // button15
             // 
@@ -283,16 +294,16 @@ namespace SaglikliYER
             // 
             // txtWater
             // 
-            this.txtWater.Location = new System.Drawing.Point(262, 31);
+            this.txtWater.Location = new System.Drawing.Point(250, 29);
             this.txtWater.Name = "txtWater";
             this.txtWater.ReadOnly = true;
-            this.txtWater.Size = new System.Drawing.Size(51, 22);
+            this.txtWater.Size = new System.Drawing.Size(38, 22);
             this.txtWater.TabIndex = 15;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 34);
+            this.label3.Location = new System.Drawing.Point(10, 34);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(237, 16);
             this.label3.TabIndex = 14;
@@ -365,7 +376,9 @@ namespace SaglikliYER
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnBack);
             this.Name = "FormSuEkleme";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSuEkleme";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormSuEkleme_FormClosed);
             this.Load += new System.EventHandler(this.FormSuEkleme_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -397,5 +410,6 @@ namespace SaglikliYER
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label4;
     }
 }

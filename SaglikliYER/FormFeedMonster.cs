@@ -21,7 +21,6 @@ namespace SaglikliYER
         {
             if (button1.Location.X == 0)
             {
-
             }
             else
             button1.Location = new Point(button1.Location.X - 50, 350);
@@ -31,18 +30,16 @@ namespace SaglikliYER
         {
             if (button1.Location.X == 700)
             {
-
             }
             else
             button1.Location = new Point(button1.Location.X + 50, 350);
         }
-
         int level = 100;
         private void FormFeedMonster_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Canavarı Besle Oyunumuza Hoşgeldiniz !! \n Oyunumuzun kuralları çok basit aşağıda" +
-                " görüğün sağ, sol butonlarını kullanarak yemekleri yakala ve cana" +
-                "varı doyur!! \n Hazır olduğunda Start butonuna basmayı unutma!!");
+            MessageBox.Show("Welcome to the feed monster game!! \n Our game rules are simple. " +
+                "By using buttons at the bottom of the page lead and feed the cookie monster!!" +
+                " \n Press Start button when you are ready!!");
 
             button1.BringToFront();
             button1.Location = new Point(350, 350);
@@ -200,6 +197,16 @@ namespace SaglikliYER
         private void FormFeedMonster_FormClosing(object sender, FormClosingEventArgs e)
         {
             timer1.Stop();
+        }
+
+        private void FormFeedMonster_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Show();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
