@@ -71,10 +71,10 @@ namespace SaglikliYER
                         "provide proteins, which are an important part of the ketogenic diet. As fish, especially trout, " +
                         "anchovy, mullet, which contain plenty of omega-3 fats. Oily fish species such as tuna, herring, " +
                         "carp, salmon, tuna, mackerel and catfish should be preferred."; break; 
-                case 4: lblBilgilendirme.Text = "saglikliyer@info.com you can contact us 24/7 via email adress."  +
+                case 4: lblBilgilendirme.Text = "SocialFit@info.com you can contact us 24/7 via email adress." +
                         "\nWhatsapp = 0532 111 11 11"  +
-                        "\nInstagram = SaglikliYER"  +
-                        "\nTwitter = SaglikliYER" 
+                        "\nInstagram = SocialFit" +
+                        "\nTwitter = SocialFit"
                         ; break; 
                 case 5:lblBilgilendirme.Text =
                     "Adress : Hüseyinağa Mah. İstiklal Cad. Saitpaşa Geçidi Çiçek Pasajı No:176, 34435 Beyoğlu/İstanbul";

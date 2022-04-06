@@ -12,7 +12,7 @@ namespace YerNTier.DAL
 {
     public class YerDBContext : DbContext
     {
-        public YerDBContext():base("Server=DESKTOP-U8PCRHO\\SQLEXPRESS01;Database=YerDB;Trusted_Connection=True;")
+        public YerDBContext():base("Server=DESKTOP-U8PCRHO\\SQLEXPRESS01;Database=SocialFitDB;Trusted_Connection=True;")
         {
             Database.SetInitializer(new YerStrategy());
         }
