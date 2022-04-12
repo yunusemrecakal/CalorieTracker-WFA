@@ -53,7 +53,18 @@ namespace SaglikliYER
             {
                 k = 1;
             }
-            else k = 400;
+            else if ((Portion)cmbPortion.SelectedIndex == Portion.Portion400gr) k = 400;
+            else
+            {
+                MessageBox.Show("Please choose a portion.");
+                return;
+            }
+
+            if (nudQuantity.Value == 0)
+            {
+                MessageBox.Show("Please increase the quantity.");
+                return;
+            }
 
             EatenFood food = new EatenFood();
             food.FoodID = food2.FoodID;
