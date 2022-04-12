@@ -16,7 +16,7 @@ namespace YerNTier.Model.Entities
 
         public int MealID { get; set; }
         public string MealName { get; set; }
-        public DateTime MealDate { get; set; } = DateTime.Now;
+        public DateTime MealDate { get; set; }
         public decimal MTotalCalorie { get; set; }
         public int DUserID { get; set; }
         public virtual DUser DUser { get; set; }
